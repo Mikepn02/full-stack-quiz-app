@@ -14,28 +14,25 @@ function SingleQuestion() {
     addAnswer,
     page,
     nextPage,
+ 
   } = useQuestionStore();
 
   const { id } = useParams();
+
 
   useEffect(() => {
     if (Number(id) < page) {
       navigate(`/question/${page}`);
     }
-  }, []); 
+  }, [id]); 
 
   const singleQuestion = allQuestion?.[page - 1];
+  // console.log(singleQuestion)
+  const { correct_answer } = singleQuestion;
 
-  console.log("singleQuestion:", singleQuestion);
-
-  if (!singleQuestion) {
-    // Handle the case when singleQuestion is undefined or null
-    return <div>Loading...</div>;
-  }
-  const {correct_answer} =  singleQuestion
   const handleClick = (value) => {
     //Add answer
-    addAnswer({ question: singleQuestion.question, answer: value });
+    addAnswer({ question:singleQuestion.question, answer: value });
 
     //Verify Answer
     if (value === correct_answer) {

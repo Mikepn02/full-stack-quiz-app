@@ -1,113 +1,148 @@
 export const Types = [
-    {
-        id: 9,
-        name: "Javascript"
-    },
-    {
-        id: 10,
-        name:"c programming"
-
-    },
-    {
-        id: 11,
-        name:"PHP"
-
-    },
-    {
-        id: 12,
-        name:"CSS"
-    },
-    {
-        id: 13,
-        name: "HTML",
-    },
-    {
-        id: 14,
-        name: "Networking",
-    },
-    {
-        id: 15,
-        name: "DATABASE",
-    }
-
-
-
+  {
+    id: 9,
+    name: "General Knowledge",
+  },
+  {
+    id: 10,
+    name: "Entertainment: Books",
+  },
+  {
+    id: 11,
+    name: "Entertainment: Film",
+  },
+  {
+    id: 12,
+    name: "Entertainment: Music",
+  },
+  {
+    id: 13,
+    name: "Entertainment: Musicals & Theatres",
+  },
+  {
+    id: 14,
+    name: "Entertainment: Television",
+  },
+  {
+    id: 15,
+    name: "Entertainment: Video Games",
+  },
+  {
+    id: 16,
+    name: "Entertainment: Board Games",
+  },
+  {
+    id: 17,
+    name: "Science & Nature",
+  },
+  {
+    id: 18,
+    name: "Science: Computers",
+  },
+  {
+    id: 19,
+    name: "Science: Mathematics",
+  },
+  {
+    id: 20,
+    name: "Mythology",
+  },
+  {
+    id: 21,
+    name: "Sports",
+  },
+  {
+    id: 22,
+    name: "Geography",
+  },
+  {
+    id: 23,
+    name: "History",
+  },
+  {
+    id: 24,
+    name: "Politics",
+  },
+  {
+    id: 25,
+    name: "Art",
+  },
+  {
+    id: 26,
+    name: "Celebrities",
+  },
+  {
+    id: 27,
+    name: "Animals",
+  },
+  {
+    id: 28,
+    name: "Vehicles",
+  },
+  {
+    id: 29,
+    name: "Entertainment: Comics",
+  },
+  {
+    id: 30,
+    name: "Science: Gadgets",
+  },
+  {
+    id: 31,
+    name: "Entertainment: Japanese Anime & Manga",
+  },
+  {
+    id: 32,
+    name: "Entertainment: Cartoon & Animations",
+  },
 ];
-export const Queries  = [
-    {   
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question:
-          "Where in an HTML document is the correct place to refer to an external style sheet?",
-        incorrectAnswers: [
-          "In the <body> section",
-          "At the end of the document",
-          "You can't refer to an external style sheet",
-        ],
-        correctAnswer: "In the <head> section",
-      },
-      {
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "Which HTML tag is used to define an internal style sheet?",
-        incorrectAnswers: ["<script>", "<headStyle>", "<css>"],
-        correctAnswer: "<style>",
-      },
-      {
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "Which HTML attribute is used to define inline styles?",
-        incorrectAnswers: ["class", "font", "styles"],
-        correctAnswer: "style",
-      },
-      { 
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "Which is the correct CSS syntax?",
-        incorrectAnswers: [
-          "{body:color=black;}",
-          "{body;color:black;}",
-          "body:color=black;",
-        ],
-        correctAnswer: "body {color: black;}",
-      },
-      {
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "How do you insert a comment in a CSS file?",
-        incorrectAnswers: [
-          "' this is a comment",
-          "// this is a comment",
-          "// this is a comment //",
-        ],
-        correctAnswer: "/* this is a comment */",
-      },
-      {
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "Which property is used to change the background color?",
-        incorrectAnswers: ["color", "bgcolor", "bgColor"],
-        correctAnswer: "background-color",
-      },
-      {
-        category: "CSS",
-        type: "Multiple",
-        difficulty:'easy',
-        question: "How do you add a background color for all <h1> elements?",
-        incorrectAnswers: [
-          "all.h1 {background-color:#FFFFFF;}",
-          "h1.setAll {background-color:#FFFFFF;}",
-          "h1.all {background-color:#FFFFFF;}",
-        ],
-        correctAnswer: "h1 {background-color:#FFFFFF;}",
-      },
 
+export const Question = [
+  {
+    category: "General Knowledge",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which company did Valve cooperate with in the creation of the Vive?",
+    correct_answer: "HTC",
+    incorrect_answers: ["Oculus", "Google", "Razer"],
+  },
+  {
+    category: "General Knowledge",
+    type: "multiple",
+    difficulty: "easy",
+    question: "How would one say goodbye in Spanish?",
+    correct_answer: "Adi&oacute;s",
+    incorrect_answers: [" Hola", "Au Revoir", "Salir"],
+  },
+  {
+    category: "General Knowledge",
+    type: "multiple",
+    difficulty: "easy",
+    question: "What was the first ever London Underground line to be built?",
+    correct_answer: "Metropolitan Line",
+    incorrect_answers: ["Circle Line", "Bakerloo Line", "Victoria Line"],
+  },
+  {
+    category: "General Knowledge",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which of the following card games revolves around numbers and basic math?",
+    correct_answer: "Uno",
+    incorrect_answers: ["Go Fish", "Twister", "Munchkin"],
+  },
+  {
+    category: "General Knowledge",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What airline was the owner of the plane that crashed off the coast of Nova Scotia in 1998?",
+    correct_answer: "Swiss Air",
+    incorrect_answers: ["Air France", "British Airways", "TWA"],
+  },
 ];
-export const Level = ["easy", "medium","hard"];
-export const Idx = ["A","B","C","D"];
+
+export const Level = ["easy", "medium", "hard"];
+
+export const Idx = ["A", "B", "C", "D"];

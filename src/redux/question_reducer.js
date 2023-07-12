@@ -18,10 +18,24 @@ export const questionReducer =  createSlice({
             //state is going to create new property queue that why we added spread operator
             ...state,
             queue: action.payload //this is to get the user input value 
+            // payload is the data that your reducer will use to update the state.
+            // payload value is the data that you pass when dispatching the startExamAction action.
           }
+       },
+       moveNextAction: (state,action) => {
+        return {
+            ...state,
+            trace: state.trace + 1
+        }
+       },
+       movePrevAction: (state,action) => {
+        return {
+            ...state,
+            trace: state.trace - 1
+        }
        }
     }
 })
 
-export const {startExamAction} = questionReducer.actions;
+export const {startExamAction,moveNextAction,movePrevAction} = questionReducer.actions;
 export default questionReducer.reducer

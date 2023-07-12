@@ -11,11 +11,11 @@ const  Data = [
     },
     {
         id:2,
-        question:"javascript is an ________________ language",
+        question:"when an operator value is NUll,type of returned by the unary operator is",
         options:[
-            'Object-oriented',
-            'Object_based',
-            'Procedural',
+            'boolean',
+            'undefined',
+            'object',
         ]
 
     },

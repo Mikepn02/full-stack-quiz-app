@@ -1,27 +1,38 @@
 import React, { useEffect, useState } from "react";
 import Data from "../database/data";
+import { useSelector } from "react-redux";
+// custom hook
+import UseFetchQuestion from "../hooks/fetchQuestion";
 
 export default function Questions(){
 
     const [checked,setChecked] = useState(undefined)
     // In your case, it will return undefined because you didn't pass any initial state in the useState hook 
+    const [{isLoading,apiData,serverError}] = UseFetchQuestion()
     const question = Data[0] 
-    useEffect(() =>{
-        console.log(question)
+    const questions= useSelector(state => state.questions.queue[state.questions.trace]);
+    const trace = useSelector(state => state.questions.trace)
+    useEffect(() => {
+        console.log(trace)
     })
 
+
     function onSelect(){
-        console.log('radio button changed')
+        // console.log('radio button changed')
     }
+      if(isLoading) return <h3 className="text-light">isLoading</h3>
+      if(serverError) return <h3 className="text-light">Server error</h3>
+
     return (
         <div className="questions">
-            <h2 className="text-light">{question.question}</h2>
+            <h2 className="text-light">{question?.question}</h2>
+            {/* this ? allow us to access property value only */}
 
-            <ul key={question.id}>
+            <ul key={questions?.id}>
 
                 {
                     // displaying question one by one using map to iterate over the array
-                    question.options.map((q,i) => (
+                    questions?.options.map((q,i) => (
                         <li key={i}>
                         <input 
                         type="radio" 
@@ -32,7 +43,7 @@ export default function Questions(){
                         
                         />
                         <label className="text-primary" htmlFor={`q${i}`}>{q}</label>
-                        <div className="check checked"></div>
+                        <div className="check"></div>
                     </li>
                     ))
                 }
